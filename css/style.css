@@ -1,6 +1,9 @@
 :root {
   --color-grey: #bbb;
-  --color-white: #eee; }
+  --color-white: #eee;
+  --color-primary: #EBE4C8;
+  --color-primary-light: rgb(223, 216, 202);
+  --color-primary-dark:#b1a77f; }
 
 *,
 *::before,
@@ -17,20 +20,14 @@ html {
       font-size: 50%; } }
 
 body {
-  background-image: url(../img/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #16242D;
   min-height: 100vh; }
-  @media only screen and (max-width: 43.75em) {
-    body {
-      background-repeat: repeat; } }
 
 body {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
-  color: var(--color-grey); }
+  color: #D9CD9E; }
 
 .heading-1 {
   font-size: 1.8rem; }
@@ -41,7 +38,9 @@ body {
 
 .container {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto; }
 
 .content-box {
   display: flex;
@@ -58,6 +57,12 @@ body {
     .logo {
       margin-top: 10rem; } }
 
+.link {
+  color: var(--color-primary-light);
+  text-decoration: none; }
+  .link:hover {
+    color: var(--color-white); }
+
 .email {
   align-self: stretch;
   display: flex;
@@ -68,7 +73,7 @@ body {
     padding: 1.5rem 2rem;
     border: none;
     border-radius: .5rem;
-    background-color: #eee;
+    background-color: var(--color-primary);
     font-family: inherit;
     width: 50%;
     transition: all .4s; }
@@ -80,7 +85,7 @@ body {
       outline: none; }
   .email__button {
     margin-left: -4.5rem;
-    background-color: #eee;
+    background-color: var(--color-primary);
     border: none;
     cursor: pointer; }
     .email__button:active {
@@ -90,16 +95,33 @@ body {
       outline: none; }
   .email__icon {
     font-size: 2.75rem;
-    color: purple; }
+    color: var(--color-primary-dark); }
   .email::before, .email::after {
     content: '';
-    background-color: var(--color-grey);
+    background-color: var(--color-primary);
     height: .1rem;
     width: 20%; }
   .email::before {
     margin-right: 2rem; }
   .email::after {
     margin-left: 3.75rem; }
+
+.icon__link {
+  width: 6rem;
+  height: 6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  text-decoration: none;
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  margin: 1rem;
+  padding: .6rem;
+  transition: all .4s ease;
+  border-radius: 50%; }
+  .icon__link:hover {
+    transform: scale(1.1); }
 
 .counter-container {
   display: grid;
@@ -129,7 +151,7 @@ body {
   .counter__circle {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    stroke: var(--color-white); }
+    stroke: var(--color-primary-light); }
   .counter__text {
     font-size: 3rem;
     font-weight: 600; }

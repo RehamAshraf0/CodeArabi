@@ -36,7 +36,7 @@ function setProgress3(percent) {
 function countdown() {
 
     var now = new Date();
-    var eventDate = new Date(2021, 5, 15);
+    var eventDate = new Date(2021, 10, 1, 15);
 
     var currentTime = now.getTime();
     var eventTime = eventDate.getTime();
